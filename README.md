@@ -36,33 +36,68 @@ The goal of this setup is to create a stable, enterprise-style virtualization pl
 ## 🪜 Configuration Steps
 
 ### Step 1 — Install Oracle VirtualBox
-Install VirtualBox on the host machine.  
+Install Oracle VirtualBox 7.2.4 on your host system.  
+This is the virtualization platform that enables you to run Windows 11 inside an isolated environment.  
 ![VirtualBox Installed](./Screenshots/virtualbox_installed.png)
-
-### Step 2 — Create a New Virtual Machine
-Create a new VM named `ABDUL-WIN11-CL01`, select **Windows 11 (64-bit)**, and attach the ISO image.  
-![VM Creation](./Screenshots/new_vm_name_iso.png)
-
-### Step 3 — Specify Virtual Hardware
-Assign 4 GB of RAM, 2 CPUs, and a 60 GB virtual hard disk. Enable EFI for modern boot support.  
-![VM Hardware](./Screenshots/vm_hardware.png)
-
-### Step 4 — Review Summary
-Double-check VM specs before creating.  
-![VM Summary](./Screenshots/vm_summary.png)
-
-### Step 5 — Optimize Shared Settings
-Enable **Shared Clipboard** and **Drag and Drop** in _Bidirectional_ mode for convenience.  
-![Bidirectional](./Screenshots/general_bidirectional.png)
-
-### Step 6 — Configure Networking
-- **Adapter 1 (NAT):** For internet access  
-  ![NAT Adapter](./Screenshots/network_nat.png)
-- **Adapter 2 (Internal):** For lab connectivity  
-  ![Internal Adapter](./Screenshots/network_internal.png)
 
 ---
 
-## 🚀 Next
-Proceed to [Windows 11 Installation](https://github.com/abdulyusuf-it/windows11-installation) to complete the OS setup inside your virtual machine.
+### Step 2 — Create a New Virtual Machine
+Open VirtualBox and click **New** to create a new VM.  
+Enter the name `ABDUL-WIN11-CL01`, choose **Windows 11 (64-bit)**, and attach your downloaded Windows 11 ISO.  
+![VM Creation](./Screenshots/new_vm_name_iso.png)
+
+---
+
+### Step 3 — Configure Virtual Hardware
+Allocate **4 GB of RAM**, **2 CPUs**, and **60 GB of disk space**.  
+Enable **EFI** to ensure compatibility with Windows 11’s Secure Boot and UEFI mode.  
+![VM Hardware](./Screenshots/vm_hardware.png)
+
+---
+
+### Step 4 — Review VM Summary
+Before finalizing, double-check all selected settings — hardware, EFI, and ISO attachment — for accuracy.  
+![VM Summary](./Screenshots/vm_summary.png)
+
+---
+
+### Step 5 — Enable Shared Features
+Under **General → Advanced**, enable:  
+- **Shared Clipboard:** Bidirectional  
+- **Drag and Drop:** Bidirectional  
+These options simplify file and text sharing between host and guest systems.  
+![Shared Features](./Screenshots/general_bidirectional.png)
+
+---
+
+### Step 6 — Configure Network Adapters
+**Adapter 1 — NAT (Internet Access):**  
+Provides the VM with external network connectivity for updates and downloads.  
+![Network NAT](./Screenshots/network_nat.png)
+
+**Adapter 2 — Internal Network (Lab Connectivity):**  
+Set this to **Internal Network** and name it `InternalLabNet`.  
+This allows communication between VMs in a safe, isolated environment.  
+![Network Internal](./Screenshots/network_internal.png)
+
+---
+
+### Step 7 — Verify ISO Attachment
+Go to **Settings → Storage**, and confirm the Windows 11 ISO file is properly mounted under the SATA controller.  
+This ensures the VM can boot from installation media.  
+![Storage ISO](./Screenshots/storage_iso.png)
+
+---
+
+### Step 8 — Final Review
+Confirm all VM details before launching.  
+Your summary should list: **4 GB RAM, 2 CPUs, EFI enabled, 60 GB disk, and dual network adapters**.  
+![VM Details](./Screenshots/vm_details.png)
+
+---
+
+✅ **Next Step:**  
+Proceed to the [Windows 11 Installation Guide](../windows-installation/README.md) to begin the OS setup inside your new VM.
+
 
