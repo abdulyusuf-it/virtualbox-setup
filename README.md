@@ -114,6 +114,34 @@ This continuation covers partitioning, user setup, and post-installation configu
 
 ---
 
+## Skills Demonstrated
+
+- Virtualization setup with Oracle VirtualBox
+- VM hardware sizing (CPU, RAM, and disk) for Windows 11
+- Configuring dual network adapters (NAT + Internal Network)
+- Enabling EFI, shared clipboard, and drag-and-drop for productivity
+- Designing a reusable lab environment for future Windows/AD projects
+
+## Use Cases
+
+This lab environment can be reused for:
+
+- Practicing Windows 11 administration
+- Building an Active Directory + Domain Controller lab
+- Testing Group Policy, PowerShell scripts, and security baselines
+- Simulating multi-VM network topologies for troubleshooting practice practice
+
+## How to Reuse This Lab
+
+1. Clone this repository and replicate the VM configuration on your local machine.
+2. Replace the Windows 11 ISO path in the VM settings with your own ISO file.
+3. Use this VM as a base template and clone it to create:
+   - A Domain Controller VM
+   - Client machines
+   - Test environments for Group Policy, PowerShell scripts, and security tools
+
+
+
 ## 💡 Project Purpose
 
 This lab establishes a consistent and reusable virtual environment for:
