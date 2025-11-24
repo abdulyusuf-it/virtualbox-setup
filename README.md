@@ -109,7 +109,7 @@ Once validated, the VM is ready to boot.
 
 ## 🚀 Next Steps
 
-✅ Proceed to the next phase: [**Windows 11 Installation Lab →**](https://github.com/abdulyusuf-it/windows11-installation)  
+✅ Proceed to the next phase: [**Windows 11 Installation Lab →**](https://github.com/abdulyusuf-it/windows-11-installation-lab)  
 This continuation covers partitioning, user setup, and post-installation configuration within the VM.
 
 ---
